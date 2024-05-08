@@ -16,10 +16,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3 # Update to the latest version
 
     - name: Setup Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3 # Update to the latest version
       with:
         python-version: '3.8'
 
@@ -29,9 +29,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install flask flask_sqlalchemy; fi
 
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
+      uses: github/codeql-action/init@v2 # Update to v2
       with:
         languages: 'python'
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v1
+      uses: github/codeql-action/analyze@v2 # Update to v2
