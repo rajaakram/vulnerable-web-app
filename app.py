@@ -58,4 +58,4 @@ def profile(username):
     return render_template('profile.html', username=username) 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
